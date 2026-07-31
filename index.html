@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Apple Spread Delivery</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🚚 Apple Spread Delivery</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#tracking">Tracking</a>
+        <button onclick="openLogin()">Sign In</button>
+    </nav>
+</header>
+
+
+<section id="home" class="hero">
+
+    <div class="hero-text">
+
+        <p class="tag">FAST • SAFE • RELIABLE</p>
+
+        <h1>
+            Delivering your packages
+            with confidence.
+        </h1>
+
+        <p>
+            Arrange your delivery, receive a tracking number,
+            and follow your shipment status from one simple page.
+        </p>
+
+        <button onclick="openRegister()" class="main-btn">
+            Create Account
+        </button>
+
+    </div>
+
+
+    <div class="delivery-card">
+
+        <div class="package-icon">
+            📦
+        </div>
+
+        <h2>Package In Transit</h2>
+
+        <p>Tracking ID</p>
+
+        <strong>ASD-2026-001</strong>
+
+        <div class="status">
+
+            <div class="status-item active">
+                ✓
+                <span>Order Received</span>
+            </div>
+
+            <div class="status-item active">
+                ✓
+                <span>Processing</span>
+            </div>
+
+            <div class="status-item active">
+                🚚
+                <span>In Transit</span>
+            </div>
+
+            <div class="status-item">
+                🏠
+                <span>Delivered</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="features">
+
+    <div>
+        <h3>🔒 Secure</h3>
+        <p>Your delivery information is protected.</p>
+    </div>
+
+    <div>
+        <h3>⚡ Fast</h3>
+        <p>Arrange deliveries quickly and easily.</p>
+    </div>
+
+    <div>
+        <h3>📍 Trackable</h3>
+        <p>Follow your package status anytime.</p>
+    </div>
+
+</section>
+
+
+<section class="delivery">
+
+    <h2>Arrange a Delivery</h2>
+
+    <p>
+        Enter your personal and delivery information below.
+    </p>
+
+
+    <form id="deliveryForm">
+
+        <h3>Personal Information</h3>
+
+        <input
+            type="text"
+            id="name"
+            placeholder="Full Name"
+            required
+        >
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Email Address"
+            required
+        >
+
+        <input
+            type="tel"
+            id="phone"
+            placeholder="Phone Number"
+            required
+        >
+
+
+        <h3>Delivery Address</h3>
+
+        <input
+            type="text"
+            id="address"
+            placeholder="Street Address"
+            required
+        >
+
+        <input
+            type="text"
+            id="city"
+            placeholder="City"
+            required
+        >
+
+        <input
+            type="text"
+            id="country"
+            placeholder="Country"
+            required
+        >
+
+
+        <select id="package">
+
+            <option value="">
+                Select Package Type
+            </option>
+
+            <option>Document</option>
+
+            <option>Small Package</option>
+
+            <option>Electronics</option>
+
+            <option>Gift</option>
+
+        </select>
+
+
+        <button type="submit" class="main-btn">
+            Create Delivery Request
+        </button>
+
+    </form>
+
+</section>
+
+
+<section id="tracking" class="tracking">
+
+    <h2>Track Your Package</h2>
+
+    <p>
+        Enter your tracking number below.
+    </p>
+
+    <div class="track-box">
+
+        <input
+            type="text"
+            id="trackingNumber"
+            placeholder="Example: ASD-2026-001"
+        >
+
+        <button onclick="trackPackage()">
+            Track
+        </button>
+
+    </div>
+
+    <div id="trackingResult"></div>
+
+</section>
+
+
+<footer>
+
+    <h3>🚚 Apple Spread Delivery</h3>
+
+    <p>
+        Simple. Safe. Reliable.
+    </p>
+
+    <small>
+        © 2026 Apple Spread Delivery
+    </small>
+
+</footer>
+
+
+<!-- REGISTER POPUP -->
+
+<div id="registerModal" class="modal">
+
+    <div class="modal-box">
+
+        <button
+            class="close"
+            onclick="closeRegister()"
+        >
+            ×
+        </button>
+
+        <h2>Create Account</h2>
+
+        <p>Register to manage your deliveries.</p>
+
+        <input
+            type="text"
+            id="registerName"
+            placeholder="Full Name"
+        >
+
+        <input
+            type="email"
+            id="registerEmail"
+            placeholder="Email Address"
+        >
+
+        <input
+            type="password"
+            id="registerPassword"
+            placeholder="Password"
+        >
+
+        <button
+            onclick="registerUser()"
+            class="main-btn"
+        >
+            Register
+        </button>
+
+        <p>
+            Already have an account?
+
+            <button
+                class="link-btn"
+                onclick="switchToLogin()"
+            >
+                Sign In
+            </button>
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- LOGIN POPUP -->
+
+<div id="loginModal" class="modal">
+
+    <div class="modal-box">
+
+        <button
+            class="close"
+            onclick="closeLogin()"
+        >
+            ×
+        </button>
+
+        <h2>Welcome Back</h2>
+
+        <p>Sign in to your account.</p>
+
+        <input
+            type="email"
+            id="loginEmail"
+            placeholder="Email Address"
+        >
+
+        <input
+            type="password"
+            id="loginPassword"
+            placeholder="Password"
+        >
+
+        <button
+            onclick="loginUser()"
+            class="main-btn"
+        >
+            Sign In
+        </button>
+
+        <p>
+            Don't have an account?
+
+            <button
+                class="link-btn"
+                onclick="switchToRegister()"
+            >
+                Register
+            </button>
+        </p>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
