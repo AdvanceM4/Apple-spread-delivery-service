@@ -1,0 +1,504 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #172033;
+}
+
+
+/* HEADER */
+
+header {
+    height: 70px;
+    padding: 0 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: white;
+
+    border-bottom: 1px solid #eee;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+}
+
+nav button {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+
+    background: #2563eb;
+    color: white;
+
+    cursor: pointer;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 600px;
+
+    padding: 80px 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef5ff,
+            #ffffff
+        );
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.tag {
+    color: #2563eb;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+}
+
+.hero-text p {
+    color: #6b7280;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+
+/* BUTTON */
+
+.main-btn {
+    padding: 14px 25px;
+
+    border: none;
+
+    background: #2563eb;
+    color: white;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.main-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* DELIVERY CARD */
+
+.delivery-card {
+    width: 420px;
+
+    padding: 35px;
+
+    background: white;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 20px 60px
+        rgba(0,0,0,0.1);
+}
+
+.package-icon {
+    font-size: 50px;
+}
+
+.delivery-card h2 {
+    margin: 15px 0;
+}
+
+.delivery-card p {
+    color: #777;
+}
+
+.delivery-card strong {
+    display: block;
+    margin-top: 5px;
+}
+
+
+/* STATUS */
+
+.status {
+    margin-top: 30px;
+}
+
+.status-item {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid #eee;
+
+    color: #999;
+}
+
+.status-item.active {
+    color: #2563eb;
+    font-weight: bold;
+}
+
+
+/* FEATURES */
+
+.features {
+    padding: 60px 7%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    background: white;
+}
+
+.features div {
+    padding: 30px;
+
+    border: 1px solid #eee;
+
+    border-radius: 15px;
+}
+
+.features p {
+    color: #777;
+
+    margin-top: 10px;
+}
+
+
+/* DELIVERY FORM */
+
+.delivery {
+    padding: 80px 7%;
+
+    text-align: center;
+}
+
+.delivery h2 {
+    font-size: 38px;
+
+    margin-bottom: 10px;
+}
+
+.delivery > p {
+    color: #777;
+
+    margin-bottom: 40px;
+}
+
+form {
+    max-width: 700px;
+
+    margin: auto;
+
+    padding: 35px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    text-align: left;
+
+    box-shadow:
+        0 15px 50px
+        rgba(0,0,0,0.07);
+}
+
+form h3 {
+    margin: 25px 0 15px;
+}
+
+form input,
+form select {
+
+    width: 100%;
+
+    padding: 14px;
+
+    margin-bottom: 15px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+}
+
+
+/* TRACKING */
+
+.tracking {
+
+    padding: 80px 7%;
+
+    text-align: center;
+
+    background: #172033;
+
+    color: white;
+}
+
+.tracking h2 {
+    font-size: 38px;
+
+    margin-bottom: 10px;
+}
+
+.tracking p {
+    color: #aaa;
+
+    margin-bottom: 30px;
+}
+
+.track-box {
+
+    max-width: 600px;
+
+    margin: auto;
+
+    display: flex;
+
+    gap: 10px;
+}
+
+.track-box input {
+
+    flex: 1;
+
+    padding: 15px;
+
+    border-radius: 8px;
+
+    border: none;
+}
+
+.track-box button {
+
+    padding: 15px 25px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #2563eb;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+#trackingResult {
+
+    margin-top: 30px;
+}
+
+
+/* FOOTER */
+
+footer {
+
+    padding: 40px;
+
+    text-align: center;
+
+    background: white;
+}
+
+footer p {
+
+    color: #777;
+
+    margin: 10px;
+}
+
+
+/* MODAL */
+
+.modal {
+
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(0,0,0,0.6);
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    z-index: 1000;
+}
+
+.modal.show {
+
+    display: flex;
+}
+
+.modal-box {
+
+    width: 100%;
+
+    max-width: 400px;
+
+    padding: 35px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    position: relative;
+}
+
+.modal-box h2 {
+
+    margin-bottom: 10px;
+}
+
+.modal-box p {
+
+    color: #777;
+
+    margin-bottom: 20px;
+}
+
+.modal-box input {
+
+    width: 100%;
+
+    padding: 14px;
+
+    margin-bottom: 15px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+}
+
+.modal-box .main-btn {
+
+    width: 100%;
+
+    margin-bottom: 20px;
+}
+
+.close {
+
+    position: absolute;
+
+    right: 20px;
+
+    top: 15px;
+
+    border: none;
+
+    background: none;
+
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+.link-btn {
+
+    border: none;
+
+    background: none;
+
+    color: #2563eb;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    nav a {
+        display: none;
+    }
+
+    .hero {
+
+        flex-direction: column;
+
+        padding: 60px 5%;
+    }
+
+    .hero h1 {
+
+        font-size: 40px;
+    }
+
+    .delivery-card {
+
+        width: 100%;
+    }
+
+    .features {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .track-box {
+
+        flex-direction: column;
+    }
+
+}
