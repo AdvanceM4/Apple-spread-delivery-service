@@ -287,10 +287,9 @@ async function trackPackage() {
         // Ask our backend for the delivery information
 
         const response =
-            await fetch(
-                "http://localhost:3000"
-            );
-
+        const response = await fetch(
+    "https://apple-spread-backend.onrender.com"
+);
 
         // Convert the response into data
 
