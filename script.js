@@ -286,13 +286,13 @@ async function trackPackage() {
 
         // Ask our backend for the delivery information
 
-        const response =
+        
         const response = await fetch(`https://apple-spread-backend.onrender.com/api/track/${trackingNumber}`)
 
         // Convert the response into data
 
-        const delivery =
-            await response.json();
+        const delivery = await
+             response.json();
 
 
         // Check if the tracking number matches
@@ -302,31 +302,16 @@ async function trackPackage() {
             delivery.trackingNumber
         ) {
 
-            result.innerHTML = 
-
-                <div class="tracking-card">
-
-                    <h3>
-                        Tracking number not found
-                    </h3>
-
-                    <p>
-                        Please check your tracking number
-                        and try again.
-                    </p>
-
-                </div>
-
-            ;
-
-            return;
-
-        }
-
+            result.innerHTML = `
+<div class="tracking-card">
+  <h3>Tracking number not found</h3>
+  <p>Please check your tracking number and try again.</p>
+</div>
+`; </div>
 
         // Display the delivery information
 
-        result.innerHTML = 
+        result.innerHTML = `
 
             <div class="tracking-card">
 
