@@ -287,9 +287,7 @@ async function trackPackage() {
         // Ask our backend for the delivery information
 
         const response =
-        const response = await fetch(
-    "https://apple-spread-backend.onrender.com"
-);
+        const response = await fetch(`https://apple-spread-backend.onrender.com/api/track/${trackingNumber}`)
 
         // Convert the response into data
 
